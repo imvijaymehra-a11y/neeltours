@@ -13,6 +13,26 @@ function openWhatsApp() {
     window.open(whatsappUrl, '_blank');
 }
 
+// Route Booking Function
+function bookRoute(route) {
+    const message = encodeURIComponent(
+        `Hi! I'd like to book a cab for: ${route}\n\n` +
+        `Please provide me with availability and pricing details.`
+    );
+    const whatsappUrl = `https://wa.me/9896037769?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+}
+
+// Service Booking Function
+function bookService(service) {
+    const message = encodeURIComponent(
+        `Hi! I'm interested in booking: ${service}\n\n` +
+        `Please provide me with more details and availability.`
+    );
+    const whatsappUrl = `https://wa.me/9896037769?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+}
+
 // Booking Form Submission
 document.getElementById('bookingForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -113,11 +133,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.padding = '0.5rem 0';
-        navbar.style.background = 'linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%)';
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.padding = '1rem 0';
-        navbar.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+        navbar.classList.remove('scrolled');
     }
 });
 

@@ -8,14 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-new.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="fas fa-car"></i> Neel Tour Travels
+                <i class="fas fa-taxi"></i> Neel Tour Travels
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -48,66 +48,127 @@
     <section class="hero">
         <div class="container">
             <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <h1 class="display-4 fw-bold text-white mb-4">
-                        Your Trusted Travel Partner Across India
+                <div class="col-lg-6 hero-content" data-aos="fade-right">
+                    <div class="badge bg-warning text-dark mb-3">
+                        <i class="fas fa-star"></i> Trusted by 10,000+ Customers
+                    </div>
+                    <h1 class="display-2 fw-bold text-white mb-4">
+                        Your Professional Travel Partner Across India
                     </h1>
                     <p class="lead text-white mb-4">
-                        Professional cab services from Ambala & Chandigarh to any destination in India. 
-                        Safe, comfortable, and affordable journeys await you.
+                        Premium cab services from Ambala & Chandigarh to any destination. 
+                        Safe, comfortable, and affordable journeys with experienced drivers.
                     </p>
-                    <div class="d-flex gap-3">
-                        <a href="contact.html" class="btn btn-primary btn-lg">
-                            <i class="fas fa-phone"></i> Call Now
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="tel:9896037769" class="btn btn-light btn-lg">
+                            <i class="fas fa-phone-alt"></i> Call Now
                         </a>
                         <a href="#" class="btn btn-success btn-lg" onclick="openWhatsApp()">
                             <i class="fab fa-whatsapp"></i> WhatsApp Booking
                         </a>
                     </div>
+                    <div class="mt-4">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-white">24/7 Service</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-white">Best Prices</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-white">Expert Drivers</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span class="text-white">Clean Vehicles</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <div class="booking-form bg-white rounded-4 shadow-lg p-4">
-                        <h3 class="text-center mb-4">Book Your Ride</h3>
+                    <div class="booking-form">
+                        <div class="text-center mb-4">
+                            <div class="badge bg-primary mb-2">Instant Booking</div>
+                            <h3 class="mb-0">Book Your Ride Now</h3>
+                            <p class="text-muted small">Get confirmed booking in 2 minutes</p>
+                        </div>
                         <form id="bookingForm">
-                            <div class="mb-3">
-                                <label class="form-label">From</label>
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-map-marker-alt text-primary"></i> Pickup Location
+                                </label>
                                 <select class="form-select" id="fromLocation" required>
                                     <option value="">Select pickup location</option>
-                                    <option value="ambala">Ambala</option>
+                                    <option value="ambala">Ambala City</option>
+                                    <option value="ambala-cantt">Ambala Cantt</option>
                                     <option value="chandigarh">Chandigarh</option>
+                                    <option value="panchkula">Panchkula</option>
+                                    <option value="mohali">Mohali</option>
                                 </select>
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label">To</label>
-                                <input type="text" class="form-control" id="toLocation" placeholder="Enter destination" required>
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-flag-checkered text-success"></i> Destination
+                                </label>
+                                <input type="text" class="form-control" id="toLocation" 
+                                       placeholder="Enter your destination" required>
                             </div>
                             <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">Date</label>
-                                    <input type="date" class="form-control" id="travelDate" required>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-calendar text-primary"></i> Travel Date
+                                        </label>
+                                        <input type="date" class="form-control" id="travelDate" required>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label">Time</label>
-                                    <input type="time" class="form-control" id="travelTime" required>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-clock text-primary"></i> Time
+                                        </label>
+                                        <input type="time" class="form-control" id="travelTime" required>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label">Car Type</label>
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-car text-primary"></i> Select Vehicle
+                                </label>
                                 <select class="form-select" id="carType" required>
-                                    <option value="">Select car type</option>
-                                    <option value="sedan">Sedan (4+1)</option>
-                                    <option value="suv">SUV (6+1)</option>
-                                    <option value="tempo">Tempo Traveller (12+1)</option>
-                                    <option value="innova">Innova (7+1)</option>
+                                    <option value="">Choose your vehicle</option>
+                                    <option value="sedan">🚗 Sedan (4+1) - Best Value</option>
+                                    <option value="suv">🚙 SUV (6+1) - Premium Comfort</option>
+                                    <option value="innova">🚐 Innova (7+1) - Luxury</option>
+                                    <option value="tempo">🚌 Tempo Traveller (12+1) - Group Travel</option>
                                 </select>
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phoneNumber" placeholder="Your contact number" required>
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-phone text-primary"></i> Contact Number
+                                </label>
+                                <input type="tel" class="form-control" id="phoneNumber" 
+                                       placeholder="Your 10-digit number" required>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">
-                                <i class="fas fa-check"></i> Book Now
+                            <button type="submit" class="btn btn-primary w-100 btn-lg">
+                                <i class="fas fa-paper-plane"></i> Book Now - Get Instant Quote
                             </button>
+                            <p class="text-center mt-3 mb-0">
+                                <small class="text-muted">
+                                    <i class="fas fa-lock"></i> Your information is secure
+                                </small>
+                            </p>
                         </form>
                     </div>
                 </div>
@@ -115,43 +176,44 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="py-5">
+    <!-- Trust Indicators -->
+    <section class="py-4 bg-white border-bottom">
         <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-12">
-                    <h2 class="display-5 fw-bold" data-aos="fade-up">Why Choose Neel Tour Travels?</h2>
-                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
-                        Experience the difference with our premium travel services
-                    </p>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-card text-center p-4">
-                        <div class="feature-icon mb-3">
-                            <i class="fas fa-shield-alt"></i>
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="fas fa-users text-primary fa-2x me-3"></i>
+                        <div class="text-start">
+                            <h4 class="mb-0 fw-bold">10,000+</h4>
+                            <small class="text-muted">Happy Customers</small>
                         </div>
-                        <h4>Safe & Secure</h4>
-                        <p>Professional drivers with verified backgrounds and well-maintained vehicles</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-card text-center p-4">
-                        <div class="feature-icon mb-3">
-                            <i class="fas fa-clock"></i>
+                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="fas fa-route text-success fa-2x me-3"></i>
+                        <div class="text-start">
+                            <h4 class="mb-0 fw-bold">50+</h4>
+                            <small class="text-muted">Cities Covered</small>
                         </div>
-                        <h4>24/7 Service</h4>
-                        <p>Round-the-clock availability for your travel needs</p>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="feature-card text-center p-4">
-                        <div class="feature-icon mb-3">
-                            <i class="fas fa-rupee-sign"></i>
+                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="fas fa-car text-warning fa-2x me-3"></i>
+                        <div class="text-start">
+                            <h4 class="mb-0 fw-bold">100+</h4>
+                            <small class="text-muted">Vehicle Fleet</small>
                         </div>
-                        <h4>Affordable Rates</h4>
-                        <p>Competitive pricing with no hidden charges</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="fas fa-star text-danger fa-2x me-3"></i>
+                        <div class="text-start">
+                            <h4 class="mb-0 fw-bold">4.8/5</h4>
+                            <small class="text-muted">Customer Rating</small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -162,44 +224,181 @@
     <section class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold">Popular Routes</h2>
-                <p class="lead text-muted">Frequently traveled destinations from Ambala & Chandigarh</p>
+                <h2 class="display-5 fw-bold" data-aos="fade-up">Popular Routes & Pricing</h2>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                    Most traveled destinations with transparent pricing
+                </p>
             </div>
             <div class="row g-4">
-                <div class="col-md-3 col-sm-6" data-aos="zoom-in">
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in">
                     <div class="route-card">
-                        <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=250&fit=crop" alt="Delhi" class="card-img-top">
+                        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=250&fit=crop" 
+                             alt="Delhi" class="card-img-top">
                         <div class="card-body">
-                            <h5>Ambala → Delhi</h5>
-                            <p class="text-muted">Starting from ₹2,500</p>
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h6 class="mb-0">Ambala → Delhi</h6>
+                                    <small class="text-muted">200 km • 4 hours</small>
+                                </div>
+                                <span class="price-badge">₹2,500</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-success">
+                                    <i class="fas fa-check-circle"></i> Available
+                                </small>
+                                <button class="btn btn-sm btn-outline-primary" onclick="bookRoute('Ambala to Delhi')">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                     <div class="route-card">
-                        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=250&fit=crop" alt="Manali" class="card-img-top">
+                        <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=250&fit=crop" 
+                             alt="Manali" class="card-img-top">
                         <div class="card-body">
-                            <h5>Chandigarh → Manali</h5>
-                            <p class="text-muted">Starting from ₹4,500</p>
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h6 class="mb-0">Chandigarh → Manali</h6>
+                                    <small class="text-muted">320 km • 8 hours</small>
+                                </div>
+                                <span class="price-badge">₹4,500</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-success">
+                                    <i class="fas fa-check-circle"></i> Available
+                                </small>
+                                <button class="btn btn-sm btn-outline-primary" onclick="bookRoute('Chandigarh to Manali')">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                     <div class="route-card">
-                        <img src="https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=400&h=250&fit=crop" alt="Jaipur" class="card-img-top">
+                        <img src="https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=400&h=250&fit=crop" 
+                             alt="Jaipur" class="card-img-top">
                         <div class="card-body">
-                            <h5>Ambala → Jaipur</h5>
-                            <p class="text-muted">Starting from ₹3,500</p>
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h6 class="mb-0">Ambala → Jaipur</h6>
+                                    <small class="text-muted">450 km • 7 hours</small>
+                                </div>
+                                <span class="price-badge">₹3,500</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-success">
+                                    <i class="fas fa-check-circle"></i> Available
+                                </small>
+                                <button class="btn btn-sm btn-outline-primary" onclick="bookRoute('Ambala to Jaipur')">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
                     <div class="route-card">
-                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=250&fit=crop" alt="Amritsar" class="card-img-top">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=250&fit=crop" 
+                             alt="Amritsar" class="card-img-top">
                         <div class="card-body">
-                            <h5>Chandigarh → Amritsar</h5>
-                            <p class="text-muted">Starting from ₹2,000</p>
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <div>
+                                    <h6 class="mb-0">Chandigarh → Amritsar</h6>
+                                    <small class="text-muted">230 km • 4 hours</small>
+                                </div>
+                                <span class="price-badge">₹2,000</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-success">
+                                    <i class="fas fa-check-circle"></i> Available
+                                </small>
+                                <button class="btn btn-sm btn-outline-primary" onclick="bookRoute('Chandigarh to Amritsar')">
+                                    Book Now
+                                </button>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="services.html" class="btn btn-primary btn-lg">
+                    View All Routes <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold" data-aos="fade-up">Our Premium Services</h2>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                    Comprehensive travel solutions for every need
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-city"></i>
+                        </div>
+                        <h3>Local Taxi Service</h3>
+                        <p>Quick and reliable local transportation within Ambala, Chandigarh and surrounding areas.</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Point-to-point service</li>
+                            <li><i class="fas fa-check"></i> Hourly rental available</li>
+                            <li><i class="fas fa-check"></i> 24/7 availability</li>
+                        </ul>
+                        <div class="price-info">
+                            <span class="price-badge">₹11/km</span>
+                        </div>
+                        <button class="btn btn-primary mt-3" onclick="bookService('Local Taxi')">
+                            Book Local Taxi
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Outstation Taxi</h3>
+                        <p>Comfortable long-distance travel to any destination across India with experienced drivers.</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> One-way & round-trip</li>
+                            <li><i class="fas fa-check"></i> Experienced drivers</li>
+                            <li><i class="fas fa-check"></i> Well-maintained vehicles</li>
+                        </ul>
+                        <div class="price-info">
+                            <span class="price-badge">₹9/km</span>
+                        </div>
+                        <button class="btn btn-primary mt-3" onclick="bookService('Outstation Taxi')">
+                            Book Outstation
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h3>Airport Transfer</h3>
+                        <p>Timely and comfortable airport transfers to/from Chandigarh, Delhi and nearby airports.</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Flight tracking included</li>
+                            <li><i class="fas fa-check"></i> Meet & greet service</li>
+                            <li><i class="fas fa-check"></i> Luggage assistance</li>
+                        </ul>
+                        <div class="price-info">
+                            <span class="price-badge">₹1,500+</span>
+                        </div>
+                        <button class="btn btn-primary mt-3" onclick="bookService('Airport Transfer')">
+                            Book Airport
+                        </button>
                     </div>
                 </div>
             </div>
