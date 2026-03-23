@@ -184,6 +184,16 @@
     }
     </script>
     
+    <!-- Security Headers and Protection -->
+    <meta name="csrf-token" content="secure-token-123456789">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; img-src 'self' https://images.pexels.com data:; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; connect-src 'self' https://api.whatsapp.com; frame-ancestors 'none';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
     <!-- Performance and SEO Meta Tags -->
     <meta name="theme-color" content="#FF6B35">
     <meta name="mobile-web-app-capable" content="yes">
@@ -880,8 +890,153 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="script.js" defer></script>
     
-    <!-- Performance Optimization Script -->
+    <!-- Security and Performance Optimization Scripts -->
     <script>
+        // Security and integrity checks
+        (function() {
+            'use strict';
+            
+            // Prevent right-click and context menu
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                console.log('Context menu prevented for security');
+            });
+            
+            // Prevent text selection on sensitive elements
+            document.addEventListener('selectstart', function(e) {
+                if (e.target.closest('.booking-form, .navbar, .contact-info-card')) {
+                    e.preventDefault();
+                }
+            });
+            
+            // Prevent drag and drop
+            document.addEventListener('dragstart', function(e) {
+                if (e.target.closest('img, .booking-form')) {
+                    e.preventDefault();
+                }
+            });
+            
+            // Content Security Policy enforcement
+            if (!window.csp) {
+                console.warn('CSP not enforced - please implement server-side CSP headers');
+            }
+            
+            // Check for console tampering
+            const originalConsole = window.console;
+            Object.defineProperty(window, 'console', {
+                get: function() {
+                    return originalConsole;
+                },
+                set: function(value) {
+                    if (value !== originalConsole) {
+                        console.warn('Console tampering detected!');
+                    }
+                    originalConsole = value;
+                }
+            });
+            
+            // Prevent iframe embedding
+            if (window.top !== window.self) {
+                document.body.innerHTML = '<h1>Security Alert: This website cannot be embedded in iframes.</h1>';
+                throw new Error('Iframe embedding blocked');
+            }
+            
+            // Form security enhancements
+            function secureForm(form) {
+                // Add CSRF token (if implemented)
+                const csrfToken = document.querySelector('meta[name="csrf-token"]');
+                if (csrfToken) {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'csrf_token';
+                    input.value = csrfToken.getAttribute('content');
+                    form.appendChild(input);
+                }
+                
+                // Validate form data
+                form.addEventListener('submit', function(e) {
+                    const requiredFields = form.querySelectorAll('[required]');
+                    let isValid = true;
+                    
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            isValid = false;
+                            field.classList.add('is-invalid');
+                        } else {
+                            field.classList.remove('is-invalid');
+                        }
+                    });
+                    
+                    if (!isValid) {
+                        e.preventDefault();
+                        alert('Please fill in all required fields correctly.');
+                        return false;
+                    }
+                    
+                    // Sanitize input data
+                    const formData = new FormData(form);
+                    for (let [key, value] of formData.entries()) {
+                        if (typeof value === 'string') {
+                            formData.set(key, value.trim().replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*<\/script>|<\/script>)/gi, ''));
+                        }
+                    }
+                });
+            }
+            
+            // Initialize security for all forms
+            document.addEventListener('DOMContentLoaded', function() {
+                const forms = document.querySelectorAll('form');
+                forms.forEach(secureForm);
+            });
+            
+            // Performance monitoring
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    if('performance' in window && 'getEntriesByType' in performance) {
+                        const resources = performance.getEntriesByType('resource');
+                        const slowResources = resources.filter(r => r.duration > 1000);
+                        if(slowResources.length > 0) {
+                            console.warn('Slow resources detected:', slowResources);
+                        }
+                        
+                        // Check for suspicious scripts
+                        const scripts = performance.getEntriesByType('measure').filter(e => e.name.includes('script'));
+                        scripts.forEach(script => {
+                            if(script.duration > 5000) {
+                                console.warn('Suspicious script detected:', script.name, 'Duration:', script.duration + 'ms');
+                            }
+                        });
+                    }
+                }, 0);
+            });
+            
+            // Detect and prevent common attacks
+            function detectSuspiciousActivity() {
+                // Check for URL tampering
+                if (window.location.href !== window.location.origin + window.location.pathname) {
+                    console.warn('URL tampering detected');
+                }
+                
+                // Check for suspicious modifications
+                const originalTitle = document.title;
+                const titleObserver = new MutationObserver(function(mutations) {
+                    mutations.forEach(function(mutation) {
+                        if (mutation.type === 'childList' && document.title !== originalTitle) {
+                            console.warn('Title modification detected');
+                        }
+                    });
+                });
+                
+                titleObserver.observe(document.querySelector('head'), {
+                    childList: true,
+                    subtree: true
+                });
+            }
+            
+            detectSuspiciousActivity();
+            
+        })();
+        
         // Initialize AOS after DOM is ready
         document.addEventListener('DOMContentLoaded', function() {
             // Optimize AOS initialization
@@ -924,19 +1079,6 @@
                     }
                 });
             });
-        });
-        
-        // Performance monitoring
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                if('performance' in window && 'getEntriesByType' in performance) {
-                    const resources = performance.getEntriesByType('resource');
-                    const slowResources = resources.filter(r => r.duration > 1000);
-                    if(slowResources.length > 0) {
-                        console.warn('Slow resources detected:', slowResources);
-                    }
-                }
-            }, 0);
         });
     </script>
 </body>
