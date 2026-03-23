@@ -1196,6 +1196,55 @@ h6 { font-weight: 500; }
     }
 }
 
+/* Icon fixes and fallbacks */
+.fas, .fab {
+    transform: scale(1) !important;
+    transform-origin: center center !important;
+    -webkit-transform: scale(1) !important;
+    -moz-transform: scale(1) !important;
+    -ms-transform: scale(1) !important;
+    -o-transform: scale(1) !important;
+}
+
+.fa-phone-alt {
+    transform: scaleX(1) rotate(0deg) !important;
+    -webkit-transform: scaleX(1) rotate(0deg) !important;
+    -moz-transform: scaleX(1) rotate(0deg) !important;
+    -ms-transform: scaleX(1) rotate(0deg) !important;
+    -o-transform: scaleX(1) rotate(0deg) !important;
+}
+
+.icon-fallback {
+    font-size: 1.2em !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    width: 1.2em !important;
+    height: 1.2em !important;
+    text-align: center !important;
+    line-height: 1.2em !important;
+}
+
+/* Image placeholder styles */
+.fallback-applied {
+    display: none !important;
+}
+
+.image-placeholder {
+    background: linear-gradient(135deg, #f0f0f0 25%, #e0e0e0 25%, #e0e0e0 50%, #f0f0f0 50%, #f0f0f0 75%, #e0e0e0 75%, #e0e0e0) !important;
+    background-size: 20px 20px !important;
+    border: 2px dashed #ccc !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #666 !important;
+    font-size: 14px !important;
+    font-family: Arial, sans-serif !important;
+    text-align: center !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+}
+
 /* Mobile and Tablet Optimizations */
 
 /* Touch-friendly improvements */

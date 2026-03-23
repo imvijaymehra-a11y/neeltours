@@ -307,7 +307,7 @@
                     <div class="badge bg-warning text-dark mb-3">
                         <i class="fas fa-star"></i> Trusted by 10,000+ Customers
                     </div>
-                    <h1 class="display-2 fw-bold text-white mb-4">
+                    <h1 class="display-2 fw-bold text-white mb-4" style="margin-top: 20px;">
                         Your Professional Travel Partner Across India
                     </h1>
                     <p class="lead text-white mb-4">
@@ -316,7 +316,7 @@
                     </p>
                     <div class="d-flex flex-wrap gap-3">
                         <a href="tel:9896037769" class="btn btn-light btn-lg">
-                            <i class="fas fa-phone-alt" data-fallback="📞"></i> Call Now
+                            <i class="fas fa-phone-alt" data-fallback="📞" style="transform: scaleX(1);"></i> Call Now
                         </a>
                         <a href="#" class="btn btn-success btn-lg" onclick="openWhatsApp()">
                             <i class="fab fa-whatsapp" data-fallback="💬"></i> WhatsApp Booking
@@ -1067,10 +1067,64 @@
                 });
             }
             
+            // Image fallback system
+            function handleImageErrors() {
+                const images = document.querySelectorAll('img');
+                images.forEach(img => {
+                    img.addEventListener('error', function() {
+                        if (!img.classList.contains('fallback-applied')) {
+                            img.classList.add('fallback-applied');
+                            
+                            // Create a styled placeholder
+                            const placeholder = document.createElement('div');
+                            placeholder.style.cssText = `
+                                width: ${img.width || '100%'};
+                                height: ${img.height || '200px'};
+                                background: linear-gradient(135deg, #f0f0f0 25%, #e0e0e0 25%, #e0e0e0 50%, #f0f0f0 50%, #f0f0f0 75%, #e0e0e0 75%, #e0e0e0);
+                                background-size: 20px 20px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #666;
+                                font-size: 14px;
+                                font-family: Arial, sans-serif;
+                                border-radius: 8px;
+                                border: 2px dashed #ccc;
+                                text-align: center;
+                                padding: 20px;
+                                box-sizing: border-box;
+                            `;
+                            
+                            // Add icon or text based on context
+                            const alt = img.alt || '';
+                            if (alt.includes('logo')) {
+                                placeholder.innerHTML = '🚗<br><small>Logo</small>';
+                            } else if (alt.includes('taxi') || alt.includes('cab')) {
+                                placeholder.innerHTML = '🚕<br><small>Taxi</small>';
+                            } else if (alt.includes('ambala') || alt.includes('chandigarh')) {
+                                placeholder.innerHTML = '📍<br><small>Location</small>';
+                            } else {
+                                placeholder.innerHTML = '🖼️<br><small>Image</small>';
+                            }
+                            
+                            // Replace image with placeholder
+                            img.parentNode.replaceChild(placeholder, img);
+                            console.log('Enhanced image fallback applied for:', alt);
+                        }
+                    });
+                    
+                    // Also check if image is already broken (for cached images)
+                    if (img.naturalWidth === 0 && img.complete) {
+                        img.dispatchEvent(new Event('error'));
+                    }
+                });
+            }
+            
             // Initialize icon system
             document.addEventListener('DOMContentLoaded', function() {
                 loadFontAwesome();
                 setTimeout(checkIcons, 1000);
+                handleImageErrors();
             });
         document.addEventListener('DOMContentLoaded', function() {
             // Optimize AOS initialization
