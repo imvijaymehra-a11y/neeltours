@@ -8,14 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-new.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <i class="fas fa-car"></i> Neel Tour Travels
+                <img src="images/neel-tour-travels-logo.png" alt="Neel Tour Travels Logo" class="logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -47,20 +47,106 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h1 class="display-4 fw-bold text-white mb-3" data-aos="fade-up">Our Services</h1>
-                    <p class="lead text-white" data-aos="fade-up" data-aos-delay="100">
-                        Comprehensive travel solutions for all your transportation needs
+            <div class="row align-items-center min-vh-100">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <div class="badge bg-warning text-dark mb-3">
+                        <i class="fas fa-concierge-bell"></i> Professional Services
+                    </div>
+                    <h1 class="display-2 fw-bold text-white mb-4">
+                        Premium Transportation Services
+                    </h1>
+                    <p class="lead text-white mb-5">
+                        Experience the ultimate in comfort, safety, and reliability with our comprehensive range of travel solutions. 
+                        From local commutes to cross-country journeys, we've got your transportation needs covered with professional 
+                        drivers and well-maintained vehicles.
                     </p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#services-grid" class="btn btn-light btn-lg">
+                            <i class="fas fa-th-large"></i> Explore Services
+                        </a>
+                        <a href="tel:9896037769" class="btn btn-success btn-lg">
+                            <i class="fas fa-phone-alt"></i> Call Expert
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Introduction -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-5 fw-bold mb-4">
+                        Your Trusted Travel Partner Since 2010
+                    </h2>
+                    <p class="lead mb-4">
+                        With over a decade of excellence in the transportation industry, Neel Tour Travels has established 
+                        itself as the premier choice for discerning travelers across North India. Our commitment to safety, 
+                        punctuality, and customer satisfaction has earned us the trust of over 10,000 satisfied customers.
+                    </p>
+                    <p class="mb-4">
+                        Whether you're planning a business trip, family vacation, or need reliable daily transportation, 
+                        our diverse fleet of vehicles and team of professional drivers ensure that every journey with us is 
+                        comfortable, safe, and memorable.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-shield-alt text-primary me-3 fa-2x"></i>
+                                <div>
+                                    <h6 class="mb-0">100% Safe</h6>
+                                    <small class="text-muted">Verified drivers & vehicles</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-clock text-success me-3 fa-2x"></i>
+                                <div>
+                                    <h6 class="mb-0">On Time</h6>
+                                    <small class="text-muted">Always punctual service</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-dollar-sign text-warning me-3 fa-2x"></i>
+                                <div>
+                                    <h6 class="mb-0">Best Prices</h6>
+                                    <small class="text-muted">Transparent pricing</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-headset text-danger me-3 fa-2x"></i>
+                                <div>
+                                    <h6 class="mb-0">24/7 Support</h6>
+                                    <small class="text-muted">Round the clock help</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1542362567-b07e54324a68?w=600&h=400&fit=crop" 
+                         alt="Professional Taxi Service" class="img-fluid rounded-4 shadow-lg">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="py-5">
+    <section class="py-5" id="services-grid">
         <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold" data-aos="fade-up">Our Comprehensive Services</h2>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                    Tailored transportation solutions to meet every travel requirement
+                </p>
+            </div>
             <div class="row g-4">
                 <!-- Local Taxi Service -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up">
@@ -69,17 +155,28 @@
                             <i class="fas fa-city"></i>
                         </div>
                         <h3>Local Taxi Service</h3>
-                        <p>Quick and reliable local transportation within Ambala and Chandigarh. Perfect for daily commutes, shopping trips, and city tours.</p>
-                        <ul class="features-list">
-                            <li><i class="fas fa-check"></i> Point-to-point service</li>
-                            <li><i class="fas fa-check"></i> Hourly rental available</li>
-                            <li><i class="fas fa-check"></i> 24/7 availability</li>
-                        </ul>
+                        <p>
+                            Navigate the city with ease using our reliable local taxi services. Perfect for daily commutes, 
+                            shopping trips, medical appointments, or city tours. Our professional drivers know every corner 
+                            of Ambala, Chandigarh, and surrounding areas, ensuring you reach your destination efficiently 
+                            and comfortably.
+                        </p>
+                        <div class="service-highlights">
+                            <h6>Service Highlights:</h6>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Point-to-point service within city limits</li>
+                                <li><i class="fas fa-check"></i> Hourly rental for city tours and shopping</li>
+                                <li><i class="fas fa-check"></i> 24/7 availability for emergency needs</li>
+                                <li><i class="fas fa-check"></i> Knowledgeable local drivers</li>
+                                <li><i class="fas fa-check"></i> Clean, air-conditioned vehicles</li>
+                            </ul>
+                        </div>
                         <div class="price-info">
-                            <span class="price-badge">Starting from ₹11/km</span>
+                            <span class="price-badge">₹11/km</span>
+                            <small class="text-muted">Base fare: ₹50</small>
                         </div>
                         <button class="btn btn-primary mt-3" onclick="bookService('Local Taxi')">
-                            Book Now
+                            Book Local Taxi
                         </button>
                     </div>
                 </div>
@@ -91,17 +188,27 @@
                             <i class="fas fa-route"></i>
                         </div>
                         <h3>Outstation Taxi</h3>
-                        <p>Comfortable long-distance travel to any destination across India. Ideal for family trips, business travel, and vacations.</p>
-                        <ul class="features-list">
-                            <li><i class="fas fa-check"></i> One-way & round-trip</li>
-                            <li><i class="fas fa-check"></i> Experienced drivers</li>
-                            <li><i class="fas fa-check"></i> Well-maintained vehicles</li>
-                        </ul>
+                        <p>
+                            Embark on memorable journeys with our premium outstation taxi services. Whether it's a family 
+                            vacation to the hills, a business trip to another city, or a pilgrimage to sacred sites, our 
+                            comfortable vehicles and experienced drivers make long-distance travel a pleasure.
+                        </p>
+                        <div class="service-highlights">
+                            <h6>Service Highlights:</h6>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> One-way & round-trip options</li>
+                                <li><i class="fas fa-check"></i> Experienced long-distance drivers</li>
+                                <li><i class="fas fa-check"></i> Well-maintained, comfortable vehicles</li>
+                                <li><i class="fas fa-check"></i> Flexible timing and stops</li>
+                                <li><i class="fas fa-check"></i> Transparent pricing with no hidden charges</li>
+                            </ul>
+                        </div>
                         <div class="price-info">
-                            <span class="price-badge">Starting from ₹9/km</span>
+                            <span class="price-badge">₹9/km</span>
+                            <small class="text-muted">Driver allowance: ₹300/day</small>
                         </div>
                         <button class="btn btn-primary mt-3" onclick="bookService('Outstation Taxi')">
-                            Book Now
+                            Book Outstation
                         </button>
                     </div>
                 </div>
@@ -113,17 +220,27 @@
                             <i class="fas fa-plane"></i>
                         </div>
                         <h3>Airport Transfer</h3>
-                        <p>Timely and comfortable airport transfers to/from Chandigarh, Delhi, and other nearby airports. Never miss your flight!</p>
-                        <ul class="features-list">
-                            <li><i class="fas fa-check"></i> Flight tracking included</li>
-                            <li><i class="fas fa-check"></i> Meet & greet service</li>
-                            <li><i class="fas fa-check"></i> Luggage assistance</li>
-                        </ul>
+                        <p>
+                            Never miss a flight with our punctual airport transfer services. We provide comfortable and 
+                            reliable transportation to and from Chandigarh Airport, Delhi Airport, and other regional airports. 
+                            Our flight tracking system ensures we arrive exactly when you need us.
+                        </p>
+                        <div class="service-highlights">
+                            <h6>Service Highlights:</h6>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Real-time flight tracking included</li>
+                                <li><i class="fas fa-check"></i> Professional meet & greet service</li>
+                                <li><i class="fas fa-check"></i> Complimentary luggage assistance</li>
+                                <li><i class="fas fa-check"></i> 30-minute grace period for delays</li>
+                                <li><i class="fas fa-check"></i> Comfortable waiting area at airport</li>
+                            </ul>
+                        </div>
                         <div class="price-info">
-                            <span class="price-badge">Starting from ₹1,500</span>
+                            <span class="price-badge">₹1,500+</span>
+                            <small class="text-muted">Based on distance & vehicle type</small>
                         </div>
                         <button class="btn btn-primary mt-3" onclick="bookService('Airport Transfer')">
-                            Book Now
+                            Book Airport
                         </button>
                     </div>
                 </div>
@@ -135,39 +252,59 @@
                             <i class="fas fa-briefcase"></i>
                         </div>
                         <h3>Corporate Travel</h3>
-                        <p>Professional transportation solutions for businesses. Employee transfers, client meetings, and corporate events.</p>
-                        <ul class="features-list">
-                            <li><i class="fas fa-check"></i> Monthly billing options</li>
-                            <li><i class="fas fa-check"></i> Priority service</li>
-                            <li><i class="fas fa-check"></i> Dedicated support</li>
-                        </ul>
+                        <p>
+                            Elevate your business travel with our professional corporate transportation solutions. We understand 
+                            the importance of punctuality and professionalism in corporate environments. Our services are tailored 
+                            to meet the specific needs of businesses, from employee transfers to client transportation.
+                        </p>
+                        <div class="service-highlights">
+                            <h6>Service Highlights:</h6>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Monthly billing & credit facilities</li>
+                                <li><i class="fas fa-check"></i> Priority service for corporate clients</li>
+                                <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                                <li><i class="fas fa-check"></i> Professional, well-dressed drivers</li>
+                                <li><i class="fas fa-check"></i> Detailed trip reports & invoices</li>
+                            </ul>
+                        </div>
                         <div class="price-info">
-                            <span class="price-badge">Custom packages</span>
+                            <span class="price-badge">Custom Rates</span>
+                            <small class="text-muted">Volume-based discounts available</small>
                         </div>
                         <button class="btn btn-primary mt-3" onclick="bookService('Corporate Travel')">
-                            Get Quote
+                            Book Corporate
                         </button>
                     </div>
                 </div>
 
-                <!-- Wedding Transportation -->
+                <!-- Wedding & Events -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-heart"></i>
                         </div>
-                        <h3>Wedding Transportation</h3>
-                        <p>Make your special day memorable with our premium wedding transportation services. Decorated vehicles for baraat and guest transport.</p>
-                        <ul class="features-list">
-                            <li><i class="fas fa-check"></i> Decorated vehicles</li>
-                            <li><i class="fas fa-check"></i> Multiple cars available</li>
-                            <li><i class="fas fa-check"></i> Special wedding packages</li>
-                        </ul>
-                        <div class="price-info">
-                            <span class="price-badge">Starting from ₹5,000</span>
+                        <h3>Wedding & Events</h3>
+                        <p>
+                            Make your special occasions even more memorable with our premium event transportation services. 
+                            From wedding guest transportation to corporate event logistics, we ensure seamless travel experiences 
+                            for all your attendees with style and sophistication.
+                        </p>
+                        <div class="service-highlights">
+                            <h6>Service Highlights:</h6>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Decorated vehicles for weddings</li>
+                                <li><i class="fas fa-check"></i> Multiple vehicle coordination</li>
+                                <li><i class="fas fa-check"></i> VIP transportation for special guests</li>
+                                <li><i class="fas fa-check"></i> Flexible scheduling for events</li>
+                                <li><i class="fas fa-check"></i> Professional chauffeurs in formal attire</li>
+                            </ul>
                         </div>
-                        <button class="btn btn-primary mt-3" onclick="bookService('Wedding Transportation')">
-                            Book Now
+                        <div class="price-info">
+                            <span class="price-badge">Package Deals</span>
+                            <small class="text-muted">Customized pricing for events</small>
+                        </div>
+                        <button class="btn btn-primary mt-3" onclick="bookService('Wedding & Events')">
+                            Book Event
                         </button>
                     </div>
                 </div>
@@ -179,17 +316,27 @@
                             <i class="fas fa-map-marked-alt"></i>
                         </div>
                         <h3>Tour Packages</h3>
-                        <p>Guided tour packages to popular destinations like Shimla, Manali, Dharamshala, and more. Includes sightseeing and accommodation.</p>
-                        <ul class="features-list">
-                            <li><i class="fas fa-check"></i> 2-7 day packages</li>
-                            <li><i class="fas fa-check"></i> Experienced guides</li>
-                            <li><i class="fas fa-check"></i> All-inclusive packages</li>
-                        </ul>
-                        <div class="price-info">
-                            <span class="price-badge">Starting from ₹3,500/day</span>
+                        <p>
+                            Discover the beauty of North India with our carefully curated tour packages. From the scenic 
+                            landscapes of Himachal Pradesh to the cultural heritage of Rajasthan, our experienced drivers 
+                            double up as knowledgeable guides, making your journey informative and enjoyable.
+                        </p>
+                        <div class="service-highlights">
+                            <h6>Service Highlights:</h6>
+                            <ul class="features-list">
+                                <li><i class="fas fa-check"></i> Pre-planned itineraries for popular destinations</li>
+                                <li><i class="fas fa-check"></i> Knowledgeable driver-guides</li>
+                                <li><i class="fas fa-check"></i> Flexible customization options</li>
+                                <li><i class="fas fa-check"></i> Multi-day packages with overnight stays</li>
+                                <li><i class="fas fa-check"></i> Local insights and recommendations</li>
+                            </ul>
                         </div>
-                        <button class="btn btn-primary mt-3" onclick="bookService('Tour Package')">
-                            View Packages
+                        <div class="price-info">
+                            <span class="price-badge">From ₹5,000/day</span>
+                            <small class="text-muted">Based on package & duration</small>
+                        </div>
+                        <button class="btn btn-primary mt-3" onclick="bookService('Tour Packages')">
+                            Book Tour
                         </button>
                     </div>
                 </div>
