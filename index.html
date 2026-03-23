@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neel Tour Travels - Cab Booking Services</title>
+    <meta name="description" content="Professional cab booking services from Ambala & Chandigarh to all over India. Safe, reliable, and affordable transportation.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-car"></i> Neel Tour Travels
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-whatsapp" href="#" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold text-white mb-4">
+                        Your Trusted Travel Partner Across India
+                    </h1>
+                    <p class="lead text-white mb-4">
+                        Professional cab services from Ambala & Chandigarh to any destination in India. 
+                        Safe, comfortable, and affordable journeys await you.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="#" class="btn btn-success btn-lg" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Booking
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="booking-form bg-white rounded-4 shadow-lg p-4">
+                        <h3 class="text-center mb-4">Book Your Ride</h3>
+                        <form id="bookingForm">
+                            <div class="mb-3">
+                                <label class="form-label">From</label>
+                                <select class="form-select" id="fromLocation" required>
+                                    <option value="">Select pickup location</option>
+                                    <option value="ambala">Ambala</option>
+                                    <option value="chandigarh">Chandigarh</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">To</label>
+                                <input type="text" class="form-control" id="toLocation" placeholder="Enter destination" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="travelDate" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Time</label>
+                                    <input type="time" class="form-control" id="travelTime" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Car Type</label>
+                                <select class="form-select" id="carType" required>
+                                    <option value="">Select car type</option>
+                                    <option value="sedan">Sedan (4+1)</option>
+                                    <option value="suv">SUV (6+1)</option>
+                                    <option value="tempo">Tempo Traveller (12+1)</option>
+                                    <option value="innova">Innova (7+1)</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phoneNumber" placeholder="Your contact number" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-check"></i> Book Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2 class="display-5 fw-bold" data-aos="fade-up">Why Choose Neel Tour Travels?</h2>
+                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                        Experience the difference with our premium travel services
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card text-center p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Safe & Secure</h4>
+                        <p>Professional drivers with verified backgrounds and well-maintained vehicles</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card text-center p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>24/7 Service</h4>
+                        <p>Round-the-clock availability for your travel needs</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card text-center p-4">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <h4>Affordable Rates</h4>
+                        <p>Competitive pricing with no hidden charges</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Routes -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Popular Routes</h2>
+                <p class="lead text-muted">Frequently traveled destinations from Ambala & Chandigarh</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in">
+                    <div class="route-card">
+                        <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=250&fit=crop" alt="Delhi" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Ambala → Delhi</h5>
+                            <p class="text-muted">Starting from ₹2,500</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="route-card">
+                        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=250&fit=crop" alt="Manali" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Chandigarh → Manali</h5>
+                            <p class="text-muted">Starting from ₹4,500</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="route-card">
+                        <img src="https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=400&h=250&fit=crop" alt="Jaipur" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Ambala → Jaipur</h5>
+                            <p class="text-muted">Starting from ₹3,500</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="route-card">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=250&fit=crop" alt="Amritsar" class="card-img-top">
+                        <div class="card-body">
+                            <h5>Chandigarh → Amritsar</h5>
+                            <p class="text-muted">Starting from ₹2,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">What Our Customers Say</h2>
+                <p class="lead text-muted">Real experiences from satisfied travelers</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Excellent service! The driver was professional and the car was clean. Highly recommend Neel Tour Travels."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar me-3">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Rahul Sharma</h6>
+                                <small class="text-muted">Business Traveler</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Very punctual and comfortable journey. The booking process was smooth and the rates were reasonable."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar me-3">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Priya Singh</h6>
+                                <small class="text-muted">Family Vacation</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Best travel service in Ambala! They made our trip to Manali memorable. Will definitely book again."</p>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar me-3">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Amit Kumar</h6>
+                                <small class="text-muted">Tourist</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="text-white mb-3">Ready to Travel with Comfort?</h2>
+                    <p class="text-white mb-0">Book your cab now and experience the best travel service in North India</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                    <a href="tel:9896037769" class="btn btn-light btn-lg me-2">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="#" class="btn btn-success btn-lg" onclick="openWhatsApp()">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-car"></i> Neel Tour Travels</h5>
+                    <p>Your trusted partner for comfortable and safe journeys across India.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">Home</a></li>
+                        <li><a href="services.html" class="text-white-50">Services</a></li>
+                        <li><a href="about.html" class="text-white-50">About Us</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <p class="mb-1"><i class="fas fa-map-marker-alt"></i> Shop number 2, Rattangarh Road, opposite Gurdwara Gurunanak Pura, Ambala City</p>
+                    <p class="mb-1"><i class="fas fa-phone"></i> 9896037769, 9996437769</p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="#" class="text-white-50" onclick="openWhatsApp()">WhatsApp Booking</a></p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 Neel Tour Travels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

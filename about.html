@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Neel Tour Travels</title>
+    <meta name="description" content="Learn about Neel Tour Travels - your trusted travel partner with years of experience providing safe and reliable cab services across India.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-car"></i> Neel Tour Travels
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-whatsapp" href="#" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 fw-bold text-white mb-3" data-aos="fade-up">About Us</h1>
+                    <p class="lead text-white" data-aos="fade-up" data-aos-delay="100">
+                        Your trusted travel companion for over a decade
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-5 fw-bold mb-4">Welcome to Neel Tour Travels</h2>
+                    <p class="lead mb-4">
+                        Established with a vision to provide safe, comfortable, and affordable transportation solutions, 
+                        Neel Tour Travels has become the preferred choice for travelers in Ambala, Chandigarh, and across North India.
+                    </p>
+                    <p class="mb-4">
+                        With years of experience in the travel industry, we understand the importance of reliable transportation. 
+                        Our commitment to excellence and customer satisfaction has helped us build long-lasting relationships with our clients.
+                    </p>
+                    <p class="mb-4">
+                        Whether you're planning a business trip, family vacation, or need local transportation, 
+                        we ensure your journey is comfortable, safe, and memorable.
+                    </p>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="stat-item">
+                                <h3 class="counter" data-counter data-target="10000">0</h3>
+                                <p class="text-muted">Happy Customers</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-item">
+                                <h3 class="counter" data-counter data-target="50">0</h3>
+                                <p class="text-muted">Vehicle Fleet</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" 
+                         alt="About Neel Tour Travels" class="img-fluid rounded-3 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-up">
+                    <div class="mission-vision-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>
+                            To provide exceptional travel experiences through safe, reliable, and affordable transportation 
+                            services while maintaining the highest standards of professionalism and customer care.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mission-vision-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Our Vision</h3>
+                        <p>
+                            To become the most trusted and preferred travel service provider in North India, 
+                            known for our commitment to safety, comfort, and customer satisfaction.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Why Choose Neel Tour Travels?</h2>
+                <p class="lead text-muted">We go the extra mile to ensure your satisfaction</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="why-card text-center">
+                        <div class="why-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Safety First</h4>
+                        <p>Well-maintained vehicles with regular safety checks and experienced drivers with verified backgrounds</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-card text-center">
+                        <div class="why-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Punctuality</h4>
+                        <p>We value your time and ensure timely pickups and drop-offs with real-time tracking</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-card text-center">
+                        <div class="why-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h4>Transparent Pricing</h4>
+                        <p>No hidden charges, clear billing with competitive rates and multiple payment options</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-card text-center">
+                        <div class="why-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Professional Staff</h4>
+                        <p>Experienced, courteous drivers and dedicated customer support team available 24/7</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="why-card text-center">
+                        <div class="why-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h4>Modern Fleet</h4>
+                        <p>Wide range of well-maintained vehicles from sedans to tempo travelers for all group sizes</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="why-card text-center">
+                        <div class="why-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h4>Pan India Coverage</h4>
+                        <p>Services available across India with special focus on North Indian tourist destinations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Meet Our Team</h2>
+                <p class="lead text-muted">Dedicated professionals committed to your comfort</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h5>Rajesh Kumar</h5>
+                        <p class="text-muted">Founder & CEO</p>
+                        <p>15+ years of experience in travel industry with a passion for customer service</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h5>Amit Sharma</h5>
+                        <p class="text-muted">Operations Manager</p>
+                        <p>Ensuring smooth operations and maintaining our high service standards</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h5>Priya Singh</h5>
+                        <p class="text-muted">Customer Relations</p>
+                        <p>Dedicated to providing exceptional customer service and support</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h5>Vikram Mehta</h5>
+                        <p class="text-muted">Fleet Manager</p>
+                        <p>Maintaining our fleet of vehicles to ensure safety and comfort</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Customer Stories</h2>
+                <p class="lead text-muted">Hear what our satisfied customers have to say</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Neel Tour Travels has been our go-to service for years. Their professionalism and punctuality are unmatched. Highly recommended!"</p>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar me-3">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Anjali Verma</h6>
+                                <small class="text-muted">Regular Customer</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Excellent service from Ambala to Delhi. The driver was very professional and the car was clean and comfortable. Will definitely book again!"</p>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar me-3">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Rohit Gupta</h6>
+                                <small class="text-muted">Business Traveler</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="stars mb-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"We used their tempo traveller for a family trip to Manali. The service was excellent and the pricing was very reasonable. Thank you Neel Tour Travels!"</p>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar me-3">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Sunita Aggarwal</h6>
+                                <small class="text-muted">Family Vacation</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="text-white mb-3">Experience the Neel Tour Travels Difference</h2>
+                    <p class="text-white mb-0">Join thousands of satisfied customers who trust us for their travel needs</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                    <a href="tel:9896037769" class="btn btn-light btn-lg me-2">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                    <a href="#" class="btn btn-success btn-lg" onclick="openWhatsApp()">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-car"></i> Neel Tour Travels</h5>
+                    <p>Your trusted partner for comfortable and safe journeys across India.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50">Home</a></li>
+                        <li><a href="services.html" class="text-white-50">Services</a></li>
+                        <li><a href="about.html" class="text-white-50">About Us</a></li>
+                        <li><a href="contact.html" class="text-white-50">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Info</h5>
+                    <p class="mb-1"><i class="fas fa-map-marker-alt"></i> Shop number 2, Rattangarh Road, opposite Gurdwara Gurunanak Pura, Ambala City</p>
+                    <p class="mb-1"><i class="fas fa-phone"></i> 9896037769, 9996437769</p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="#" class="text-white-50" onclick="openWhatsApp()">WhatsApp Booking</a></p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; <span data-year></span> Neel Tour Travels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
