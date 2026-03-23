@@ -84,11 +84,14 @@ h6 { font-weight: 500; }
 }
 
 .logo-img {
-    height: 80px;
+    height: 60px;
     width: auto;
     transition: all 0.3s ease;
     display: block;
     object-fit: contain;
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
 }
 
 .logo-img:hover {
@@ -871,6 +874,107 @@ h6 { font-weight: 500; }
     .booking-form {
         padding: 1rem;
     }
+}
+
+/* Contact Page Styles */
+.contact-info-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.contact-info-card h4 {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: var(--font-primary);
+}
+
+.contact-info-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.contact-form-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.contact-form-card h3 {
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-family: var(--font-primary);
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.quick-contact-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.quick-contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.quick-contact-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.quick-contact-card h5 {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: var(--font-primary);
+}
+
+.quick-contact-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
 }
 
 /* Footer */
