@@ -1196,12 +1196,170 @@ h6 { font-weight: 500; }
     }
 }
 
-/* Performance optimizations */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+/* Mobile and Tablet Optimizations */
+
+/* Touch-friendly improvements */
+.btn, .nav-link, .form-control, .form-select {
+    min-height: 44px;
+    touch-action: manipulation;
+}
+
+/* Better mobile navigation */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 0.75rem 0;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+    
+    .navbar-toggler {
+        padding: 0.5rem 0.75rem;
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Enhanced mobile form styling */
+@media (max-width: 768px) {
+    .booking-form {
+        margin: 20px auto;
+        max-width: 100%;
+        padding: 1.25rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+    
+    .form-control, .form-select {
+        padding: 1rem;
+        font-size: 16px;
+        min-height: 48px;
+        border-radius: 8px;
+    }
+    
+    .form-label {
+        font-size: 14px;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+    
+    .btn {
+        padding: 1rem 1.5rem;
+        font-size: 16px;
+        min-height: 48px;
+        border-radius: 8px;
+    }
+}
+
+/* Tablet-specific optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .booking-form {
+        max-width: 450px;
+    }
+}
+
+/* Small mobile optimizations */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.1;
+    }
+    
+    .hero-content .lead {
+        font-size: 1rem;
+    }
+    
+    .booking-form {
+        margin: 15px auto;
+        padding: 1rem;
+    }
+    
+    .form-control, .form-select {
+        padding: 0.875rem;
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 0.875rem 1.25rem;
+        font-size: 16px;
+    }
+    
+    .service-card, .blog-card, .contact-info-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Accessibility improvements */
+@media (max-width: 768px) {
+    .visually-hidden {
+        display: none;
+    }
+    
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+    
+    /* Focus indicators for better accessibility */
+    .form-control:focus,
+    .form-select:focus,
+    .btn:focus {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+    
+    /* Better contrast for mobile */
+    .text-muted {
+        color: #6c757d;
+        opacity: 0.9;
+    }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+    /* Reduce animations on mobile for better performance */
+    .hero::before {
+        animation: none;
+    }
+    
+    .booking-form {
+        transition: none;
+        transform: none;
+    }
+    
+    .service-card:hover,
+    .blog-card:hover {
+        transform: none;
+        transition: box-shadow 0.3s ease;
+    }
+    
+    /* Optimize images for mobile */
+    img {
+        content-visibility: auto;
+    contain-intrinsic-size: 1024px 768px;
     }
 }
 
