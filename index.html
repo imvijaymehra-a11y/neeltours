@@ -101,33 +101,37 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="booking-form">
-                        <div class="text-center mb-4">
+                        <div class="text-center mb-3">
                             <div class="badge bg-primary mb-2">Instant Booking</div>
                             <h3 class="mb-0">Book Your Ride Now</h3>
                             <p class="text-muted small">Get confirmed booking in 2 minutes</p>
                         </div>
                         <form id="bookingForm">
-                            <div class="form-group">
-                                <label class="form-label">
-                                    <i class="fas fa-map-marker-alt text-primary"></i> Pickup Location
-                                </label>
-                                <select class="form-select" id="fromLocation" required>
-                                    <option value="">Select pickup location</option>
-                                    <option value="ambala">Ambala City</option>
-                                    <option value="ambala-cantt">Ambala Cantt</option>
-                                    <option value="chandigarh">Chandigarh</option>
-                                    <option value="panchkula">Panchkula</option>
-                                    <option value="mohali">Mohali</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">
-                                    <i class="fas fa-flag-checkered text-success"></i> Destination
-                                </label>
-                                <input type="text" class="form-control" id="toLocation" 
-                                       placeholder="Enter your destination" required>
-                            </div>
-                            <div class="row">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-map-marker-alt text-primary"></i> Pickup Location
+                                        </label>
+                                        <select class="form-select" id="fromLocation" required>
+                                            <option value="">Select pickup location</option>
+                                            <option value="ambala">Ambala City</option>
+                                            <option value="ambala-cantt">Ambala Cantt</option>
+                                            <option value="chandigarh">Chandigarh</option>
+                                            <option value="panchkula">Panchkula</option>
+                                            <option value="mohali">Mohali</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-flag-checkered text-success"></i> Destination
+                                        </label>
+                                        <input type="text" class="form-control" id="toLocation" 
+                                               placeholder="Enter your destination" required>
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="form-label">
@@ -144,34 +148,40 @@
                                         <input type="time" class="form-control" id="travelTime" required>
                                     </div>
                                 </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-car text-primary"></i> Select Vehicle
+                                        </label>
+                                        <select class="form-select" id="carType" required>
+                                            <option value="">Choose your vehicle</option>
+                                            <option value="sedan">🚗 Sedan (4+1)</option>
+                                            <option value="suv">🚙 SUV (6+1)</option>
+                                            <option value="innova">🚐 Innova (7+1)</option>
+                                            <option value="tempo">🚌 Tempo (12+1)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <i class="fas fa-phone text-primary"></i> Contact Number
+                                        </label>
+                                        <input type="tel" class="form-control" id="phoneNumber" 
+                                               placeholder="Your 10-digit number" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 btn-lg">
+                                        <i class="fas fa-paper-plane"></i> Book Now - Get Instant Quote
+                                    </button>
+                                    <p class="text-center mt-2 mb-0">
+                                        <small class="text-muted">
+                                            <i class="fas fa-lock"></i> Your information is secure
+                                        </small>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label class="form-label">
-                                    <i class="fas fa-car text-primary"></i> Select Vehicle
-                                </label>
-                                <select class="form-select" id="carType" required>
-                                    <option value="">Choose your vehicle</option>
-                                    <option value="sedan">🚗 Sedan (4+1) - Best Value</option>
-                                    <option value="suv">🚙 SUV (6+1) - Premium Comfort</option>
-                                    <option value="innova">🚐 Innova (7+1) - Luxury</option>
-                                    <option value="tempo">🚌 Tempo Traveller (12+1) - Group Travel</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">
-                                    <i class="fas fa-phone text-primary"></i> Contact Number
-                                </label>
-                                <input type="tel" class="form-control" id="phoneNumber" 
-                                       placeholder="Your 10-digit number" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100 btn-lg">
-                                <i class="fas fa-paper-plane"></i> Book Now - Get Instant Quote
-                            </button>
-                            <p class="text-center mt-3 mb-0">
-                                <small class="text-muted">
-                                    <i class="fas fa-lock"></i> Your information is secure
-                                </small>
-                            </p>
                         </form>
                     </div>
                 </div>
@@ -235,8 +245,8 @@
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in">
                     <div class="route-card">
-                        <img src="https://images.unsplash.com/photo-1542362567-b07e54324a68?w=400&h=250&fit=crop&auto=format" 
-                             alt="City Taxi Service to Delhi" class="card-img-top">
+                        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=250&fit=crop&auto=format" 
+                             alt="India Gate Delhi" class="card-img-top">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <div>
@@ -258,8 +268,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                     <div class="route-card">
-                        <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=400&h=250&fit=crop&auto=format" 
-                             alt="Highway Taxi to Manali" class="card-img-top">
+                        <img src="https://images.unsplash.com/photo-1625557839292-6d5a5b1d9eb3?w=400&h=250&fit=crop&auto=format" 
+                             alt="Rohtang Pass Manali" class="card-img-top">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <div>
@@ -281,8 +291,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                     <div class="route-card">
-                        <img src="https://images.unsplash.com/photo-1570112617582-72e629f5e188?w=400&h=250&fit=crop&auto=format" 
-                             alt="Comfort Taxi to Jaipur" class="card-img-top">
+                        <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=400&h=250&fit=crop&auto=format" 
+                             alt="Hawa Mahal Jaipur" class="card-img-top">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <div>
@@ -304,8 +314,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
                     <div class="route-card">
-                        <img src="https://images.unsplash.com/photo-1542282088-fe8426682b91?w=400&h=250&fit=crop&auto=format" 
-                             alt="Tourist Taxi to Amritsar" class="card-img-top">
+                        <img src="https://images.unsplash.com/photo-1562799353-92e7d8b9b4a0?w=400&h=250&fit=crop&auto=format" 
+                             alt="Golden Temple Amritsar" class="card-img-top">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <div>
@@ -356,7 +366,7 @@
                             <li><i class="fas fa-check"></i> Hourly rental available</li>
                             <li><i class="fas fa-check"></i> 24/7 availability</li>
                         </ul>
-                        <div class="price-info">
+                        <div class="price-info-small">
                             <span class="price-badge">₹11/km</span>
                         </div>
                         <button class="btn btn-primary mt-3" onclick="bookService('Local Taxi')">
@@ -376,7 +386,7 @@
                             <li><i class="fas fa-check"></i> Experienced drivers</li>
                             <li><i class="fas fa-check"></i> Well-maintained vehicles</li>
                         </ul>
-                        <div class="price-info">
+                        <div class="price-info-small">
                             <span class="price-badge">₹9/km</span>
                         </div>
                         <button class="btn btn-primary mt-3" onclick="bookService('Outstation Taxi')">
@@ -396,7 +406,7 @@
                             <li><i class="fas fa-check"></i> Meet & greet service</li>
                             <li><i class="fas fa-check"></i> Luggage assistance</li>
                         </ul>
-                        <div class="price-info">
+                        <div class="price-info-small">
                             <span class="price-badge">₹1,500+</span>
                         </div>
                         <button class="btn btn-primary mt-3" onclick="bookService('Airport Transfer')">
