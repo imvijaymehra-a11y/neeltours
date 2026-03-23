@@ -979,6 +979,168 @@ h6 { font-weight: 500; }
     margin-bottom: 1.5rem;
 }
 
+/* Fleet Cards Enhancement */
+.fleet-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+.fleet-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.fleet-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.fleet-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.fleet-card .card-body {
+    padding: 1.5rem;
+}
+
+.fleet-card h5 {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-primary);
+}
+
+.fleet-card p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.fleet-card .text-muted {
+    color: var(--text-light) !important;
+    font-size: 0.85rem;
+}
+
+.fleet-card strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* Service Cards Enhancement */
+.service-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.service-card h3 {
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: var(--font-primary);
+}
+
+.service-highlights {
+    background: rgba(255, 107, 53, 0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.service-highlights h6 {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-primary);
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.features-list li i {
+    color: var(--success-color);
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.price-info {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.price-badge {
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: block;
+    font-family: var(--font-primary);
+}
+
 /* Footer */
 footer {
     background: linear-gradient(135deg, #1A1A2E 0%, #2C3E50 100%);
