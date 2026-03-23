@@ -171,8 +171,8 @@ h6 { font-weight: 500; }
 
 /* Hero Section */
 .hero {
-    background: var(--gradient-hero),
-                url('https://picsum.photos/seed/neeltourtravels/1920/1080.jpg') center/cover;
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.8), rgba(0, 78, 137, 0.8)),
+                url('https://picsum.photos/seed/taxicab/1920/1080.jpg') center/cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -279,19 +279,22 @@ h6 { font-weight: 500; }
     color: var(--text-light);
     font-size: 1rem;
     margin-bottom: 0;
-    font-weight: 400;
 }
 
 /* Modern Booking Form */
 .booking-form {
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(20px);
-    border-radius: 24px;
-    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.5rem;
     box-shadow: var(--shadow-xl);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 500px;
+    width: 100%;
+    margin-left: auto;
+    height: fit-content;
+    max-height: 500px;
+    overflow-y: auto;
     position: relative;
-    overflow: hidden;
 }
 
 .booking-form::before {
@@ -302,6 +305,7 @@ h6 { font-weight: 500; }
     right: 0;
     height: 4px;
     background: var(--gradient-primary);
+    border-radius: 16px 16px 0 0;
 }
 
 .booking-form h3 {
