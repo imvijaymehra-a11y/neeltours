@@ -190,7 +190,7 @@
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://cdnjs.cloudflare.com https://use.fontawesome.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://cdnjs.cloudflare.com; img-src 'self' data:; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://api.whatsapp.com; frame-ancestors 'none';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://cdnjs.cloudflare.com https://use.fontawesome.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://unpkg.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self' https://api.whatsapp.com; frame-ancestors 'none';">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
@@ -1120,11 +1120,51 @@
                 });
             }
             
+            // Debug image loading
+            function debugImageLoading() {
+                console.log('=== IMAGE LOADING DEBUG ===');
+                const images = document.querySelectorAll('img');
+                console.log('Found images:', images.length);
+                
+                images.forEach((img, index) => {
+                    console.log(`Image ${index + 1}:`, {
+                        src: img.src,
+                        alt: img.alt,
+                        complete: img.complete,
+                        naturalWidth: img.naturalWidth,
+                        naturalHeight: img.naturalHeight,
+                        currentSrc: img.currentSrc,
+                        error: img.error
+                    });
+                    
+                    // Test loading
+                    img.addEventListener('load', function() {
+                        console.log(`✓ Image loaded: ${img.src}`);
+                    });
+                    
+                    img.addEventListener('error', function(e) {
+                        console.log(`✗ Image failed: ${img.src}`, e);
+                        console.log('CSP violation? Check console for CSP errors');
+                    });
+                });
+                
+                // Check CSP
+                if (window.csp) {
+                    console.log('CSP enforced:', window.csp);
+                }
+                
+                // Test if images directory exists
+                fetch('images/delhi-route.jpg', { method: 'HEAD' })
+                    .then(() => console.log('✓ Images directory accessible'))
+                    .catch(() => console.log('✗ Images directory not accessible'));
+            }
+            
             // Initialize icon system
             document.addEventListener('DOMContentLoaded', function() {
                 loadFontAwesome();
                 setTimeout(checkIcons, 1000);
                 handleImageErrors();
+                debugImageLoading(); // Add debug function
             });
         document.addEventListener('DOMContentLoaded', function() {
             // Optimize AOS initialization
