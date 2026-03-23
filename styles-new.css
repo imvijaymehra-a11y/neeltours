@@ -84,14 +84,11 @@ h6 { font-weight: 500; }
 }
 
 .logo-img {
-    height: 60px;
+    height: 50px;
     width: auto;
     transition: all 0.3s ease;
     display: block;
     object-fit: contain;
-    background: white;
-    padding: 5px;
-    border-radius: 8px;
 }
 
 .logo-img:hover {
