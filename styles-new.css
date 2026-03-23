@@ -84,10 +84,11 @@ h6 { font-weight: 500; }
 }
 
 .logo-img {
-    height: 45px;
+    height: 80px;
     width: auto;
     transition: all 0.3s ease;
     display: block;
+    object-fit: contain;
 }
 
 .logo-img:hover {
@@ -170,7 +171,7 @@ h6 { font-weight: 500; }
 /* Hero Section */
 .hero {
     background: var(--gradient-hero),
-                url('https://images.unsplash.com/photo-1587474260584-136574528ed5?w=1920&h=1080&fit=crop&crop=entropy') center/cover;
+                url('https://picsum.photos/seed/neeltourtravels/1920/1080.jpg') center/cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
