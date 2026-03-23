@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Neel Tour Travels</title>
+    <meta name="description" content="Travel tips, destination guides, and insights from Neel Tour Travels. Explore North India's best destinations with our expert travel blog.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles-new.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="Neel Tour Travels Logo" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-whatsapp" href="#" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> Book Now
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <div class="badge bg-warning text-dark mb-3">
+                        <i class="fas fa-blog"></i> Travel Blog
+                    </div>
+                    <h1 class="display-2 fw-bold text-white mb-4">
+                        Travel Insights & Stories
+                    </h1>
+                    <p class="lead text-white mb-5">
+                        Discover North India's hidden gems, travel tips, and inspiring journey stories from our 
+                        experienced drivers and satisfied customers. Your gateway to memorable travel experiences.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#featured" class="btn btn-light btn-lg">
+                            <i class="fas fa-star"></i> Featured Posts
+                        </a>
+                        <a href="#categories" class="btn btn-success btn-lg">
+                            <i class="fas fa-th-large"></i> Browse Categories
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section class="py-5" id="featured">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold" data-aos="fade-up">Featured Travel Stories</h2>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                    Handpicked articles showcasing the best of North India travel
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mb-4" data-aos="fade-right">
+                    <div class="blog-card featured">
+                        <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=800&h=400&fit=crop" 
+                             alt="Manali Adventure" class="card-img-top">
+                        <div class="card-body">
+                            <div class="blog-meta mb-3">
+                                <span class="badge bg-primary">Adventure</span>
+                                <span class="badge bg-success">Himalayas</span>
+                                <small class="text-muted ms-3">
+                                    <i class="fas fa-calendar"></i> March 15, 2024
+                                </small>
+                            </div>
+                            <h3 class="card-title">Complete Guide to Manali: From Adventure to Serenity</h3>
+                            <p class="card-text">
+                                Discover the magic of Manali with our comprehensive travel guide. From thrilling adventure 
+                                sports to peaceful monasteries, explore everything this Himalayan paradise has to offer. 
+                                Learn about the best time to visit, must-see attractions, and insider tips from our experienced drivers.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="author-info">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" 
+                                         alt="Author" class="author-avatar">
+                                    <div>
+                                        <small class="text-muted">By</small>
+                                        <h6 class="mb-0">Rajesh Kumar</h6>
+                                        <small class="text-muted">Senior Driver</small>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row g-4">
+                        <div class="col-12" data-aos="fade-left" data-aos-delay="100">
+                            <div class="blog-card small">
+                                <img src="https://images.unsplash.com/photo-1524492412937-b8743b704db2?w=400&h=200&fit=crop" 
+                                     alt="Golden Temple" class="card-img-top">
+                                <div class="card-body">
+                                    <div class="blog-meta mb-2">
+                                        <span class="badge bg-warning">Spiritual</span>
+                                        <small class="text-muted ms-2">
+                                            <i class="fas fa-clock"></i> 5 min read
+                                        </small>
+                                    </div>
+                                    <h5>Golden Temple: A Spiritual Journey to Amritsar</h5>
+                                    <p class="card-text small">Experience the divine tranquility of the Golden Temple and explore the vibrant culture of Amritsar.</p>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-left" data-aos-delay="200">
+                            <div class="blog-card small">
+                                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=200&fit=crop" 
+                                     alt="Jaipur" class="card-img-top">
+                                <div class="card-body">
+                                    <div class="blog-meta mb-2">
+                                        <span class="badge bg-danger">Heritage</span>
+                                        <small class="text-muted ms-2">
+                                            <i class="fas fa-clock"></i> 7 min read
+                                        </small>
+                                    </div>
+                                    <h5>Pink City Diaries: Exploring Jaipur's Royal Heritage</h5>
+                                    <p class="card-text small">Step back in time as we explore the magnificent forts, palaces, and bazaars of Rajasthan's capital.</p>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-5 bg-light" id="categories">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold" data-aos="fade-up">Explore by Category</h2>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                    Find articles that match your travel interests
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h5>Hill Stations</h5>
+                        <p class="small">12 Articles</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-place-of-worship"></i>
+                        </div>
+                        <h5>Spiritual Journeys</h5>
+                        <p class="small">8 Articles</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h5>Food & Culture</h5>
+                        <p class="small">15 Articles</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h5>Travel Tips</h5>
+                        <p class="small">10 Articles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Posts -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold" data-aos="fade-up">Latest Travel Stories</h2>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                    Fresh insights and recent adventures from our travel community
+                </p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1548053186-89e394d7e8f4?w=400&h=250&fit=crop" 
+                             alt="Shimla" class="card-img-top">
+                        <div class="card-body">
+                            <div class="blog-meta mb-3">
+                                <span class="badge bg-info">Weekend Getaway</span>
+                                <small class="text-muted ms-3">
+                                    <i class="fas fa-calendar"></i> March 10, 2024
+                                </small>
+                            </div>
+                            <h5>Shimla Weekend: Perfect 2-Day Itinerary</h5>
+                            <p class="card-text">
+                                Planning a quick escape to Shimla? Here's the perfect weekend itinerary covering Mall Road, 
+                                Kufri, and hidden gems that most tourists miss.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-user"></i> Priya Sharma
+                                </small>
+                                <a href="#" class="btn btn-sm btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=400&h=250&fit=crop" 
+                             alt="Rishikesh" class="card-img-top">
+                        <div class="card-body">
+                            <div class="blog-meta mb-3">
+                                <span class="badge bg-success">Adventure</span>
+                                <small class="text-muted ms-3">
+                                    <i class="fas fa-calendar"></i> March 8, 2024
+                                </small>
+                            </div>
+                            <h5>Rishikesh Adventure: Beyond the Ganges</h5>
+                            <p class="card-text">
+                                From river rafting to camping under the stars, discover why Rishikesh is the adventure 
+                                capital of India. Our local guide shares secret spots.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-user"></i> Amit Verma
+                                </small>
+                                <a href="#" class="btn btn-sm btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-card">
+                        <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=400&h=250&fit=crop" 
+                             alt="Chandigarh" class="card-img-top">
+                        <div class="card-body">
+                            <div class="blog-meta mb-3">
+                                <span class="badge bg-primary">City Guide</span>
+                                <small class="text-muted ms-3">
+                                    <i class="fas fa-calendar"></i> March 5, 2024
+                                </small>
+                            </div>
+                            <h5>Chandigarh: The City Beautiful Unveiled</h5>
+                            <p class="card-text">
+                                Explore the planned perfection of Chandigarh with our comprehensive guide covering 
+                                Rock Garden, Sukhna Lake, and Le Corbusier's architectural marvels.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    <i class="fas fa-user"></i> Neha Patel
+                                </small>
+                                <a href="#" class="btn btn-sm btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-4">Stay Updated with Travel Tips</h2>
+                    <p class="lead mb-4">
+                        Subscribe to our newsletter for exclusive travel insights, special offers, and latest blog posts
+                    </p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <form class="d-flex gap-2">
+                                <input type="email" class="form-control" placeholder="Enter your email address" required>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane"></i> Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5><i class="fas fa-taxi"></i> Neel Tour Travels</h5>
+                    <p>Your trusted partner for comfortable and safe journeys across India since 2010. We pride ourselves on delivering exceptional travel experiences with professionalism and care.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Popular Posts</h5>
+                    <ul>
+                        <li><a href="#">Manali Complete Guide</a></li>
+                        <li><a href="#">Golden Temple Visit</a></li>
+                        <li><a href="#">Jaipur Heritage Tour</a></li>
+                        <li><a href="#">Shimla Weekend Trip</a></li>
+                        <li><a href="#">Rishikesh Adventure</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Contact Info</h5>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Shop number 2, Rattangarh Road, opposite Gurdwara Gurunanak Pura, Ambala City</p>
+                    <p class="mb-2"><i class="fas fa-phone me-2"></i> 9896037769, 9996437769</p>
+                    <p class="mb-2"><i class="fas fa-envelope me-2"></i> info@neeltourtravels.com</p>
+                    <p><i class="fab fa-whatsapp me-2"></i> <a href="#" class="text-white-50" onclick="openWhatsApp()">WhatsApp Booking</a></p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; <span data-year></span> Neel Tour Travels. All rights reserved. | <a href="#" class="text-white-50">Privacy Policy</a> | <a href="#" class="text-white-50">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

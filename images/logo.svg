@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 200 50">
+  <!-- Orange Circle Background -->
+  <circle cx="25" cy="25" r="20" fill="#FF6B35"/>
+  
+  <!-- White Car Icon -->
+  <path d="M15 25 L18 20 L32 20 L35 25 L32 30 L18 30 Z" fill="white"/>
+  <rect x="20" y="22" width="10" height="6" fill="#FF6B35"/>
+  <circle cx="21" cy="28" r="1.5" fill="white"/>
+  <circle cx="29" cy="28" r="1.5" fill="white"/>
+  
+  <!-- Text -->
+  <text x="55" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A1A2E">Neel Tour</text>
+  <text x="55" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1A1A2E">&amp; Travels</text>
+  <text x="55" y="42" font-family="Arial, sans-serif" font-size="6" fill="#6C757D">YOUR JOURNEY, OUR RESPONSIBILITY</text>
+</svg>

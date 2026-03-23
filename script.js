@@ -303,6 +303,22 @@ function emergencyCall() {
     }
 }
 
+// FAQ Toggle Function
+function toggleFAQ(element) {
+    const faqItem = element.parentElement;
+    const allFaqItems = document.querySelectorAll('.faq-item');
+    
+    // Close all other FAQ items
+    allFaqItems.forEach(item => {
+        if (item !== faqItem) {
+            item.classList.remove('active');
+        }
+    });
+    
+    // Toggle current FAQ item
+    faqItem.classList.toggle('active');
+}
+
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Add floating WhatsApp button

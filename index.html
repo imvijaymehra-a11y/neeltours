@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/neel-tour-travels-logo.png" alt="Neel Tour Travels Logo" class="logo-img">
+                <img src="images/logo.svg" alt="Neel Tour Travels Logo" class="logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -30,6 +30,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -232,8 +235,8 @@
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in">
                     <div class="route-card">
-                        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&h=250&fit=crop" 
-                             alt="Delhi" class="card-img-top">
+                        <img src="https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?w=400&h=250&fit=crop" 
+                             alt="India Gate, Delhi" class="card-img-top">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <div>
@@ -255,8 +258,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
                     <div class="route-card">
-                        <img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?w=400&h=250&fit=crop" 
-                             alt="Manali" class="card-img-top">
+                        <img src="https://images.unsplash.com/photo-1544168190-79c1750b45e5?w=400&h=250&fit=crop" 
+                             alt="Rohtang Pass, Manali" class="card-img-top">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <div>
@@ -278,8 +281,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                     <div class="route-card">
-                        <img src="https://images.unsplash.com/photo-1593696140826-c58b021acf8b?w=400&h=250&fit=crop" 
-                             alt="Jaipur" class="card-img-top">
+                        <img src="https://images.unsplash.com/photo-1524233577465-d391dbd02d0d?w=400&h=250&fit=crop" 
+                             alt="Hawa Mahal, Jaipur" class="card-img-top">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <div>
@@ -301,8 +304,8 @@
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
                     <div class="route-card">
-                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=250&fit=crop" 
-                             alt="Amritsar" class="card-img-top">
+                        <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?w=400&h=250&fit=crop" 
+                             alt="Golden Temple, Amritsar" class="card-img-top">
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <div>
@@ -480,6 +483,78 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold" data-aos="fade-up">Frequently Asked Questions</h2>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                    Everything you need to know about our taxi services
+                </p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-accordion" data-aos="fade-up">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h6>How do I book a taxi with Neel Tour Travels?</h6>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Booking with us is easy! You can either call us directly at 9896037769/9996437769, send a WhatsApp message, or fill out the booking form on our website. Our team will confirm your booking within minutes.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h6>What are your payment options?</h6>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We offer flexible payment options including cash, UPI, bank transfers, and digital wallets. For corporate clients, we provide monthly billing facilities with detailed invoices.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h6>Are your drivers experienced and verified?</h6>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! All our drivers undergo thorough background verification, professional training, and have valid commercial driving licenses. They have minimum 5 years of driving experience and are trained in customer service.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h6>Do you provide 24/7 service?</h6>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we operate 24/7 for your convenience. Whether you need an early morning airport transfer or a late-night pickup, we're always available to serve you.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h6>What types of vehicles do you have?</h6>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We have a diverse fleet including sedans (Swift Dzire, Etios), SUVs (Innova, Ertiga), luxury cars, and tempo travellers (12-26 seaters). All vehicles are well-maintained, air-conditioned, and regularly sanitized.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h6>How is the fare calculated?</h6>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our fares are calculated based on distance, vehicle type, and time of travel. We offer transparent pricing with no hidden charges. You'll receive a detailed fare breakdown before confirming your booking.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section py-5">
         <div class="container">
@@ -501,32 +576,50 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h5><i class="fas fa-car"></i> Neel Tour Travels</h5>
-                    <p>Your trusted partner for comfortable and safe journeys across India.</p>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5><i class="fas fa-taxi"></i> Neel Tour Travels</h5>
+                    <p>Your trusted partner for comfortable and safe journeys across India since 2010. We pride ourselves on delivering exceptional travel experiences with professionalism and care.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-2 col-md-6 mb-4">
                     <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white-50">Home</a></li>
-                        <li><a href="services.html" class="text-white-50">Services</a></li>
-                        <li><a href="about.html" class="text-white-50">About Us</a></li>
-                        <li><a href="contact.html" class="text-white-50">Contact</a></li>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Our Services</h5>
+                    <ul>
+                        <li><a href="services.html#local">Local Taxi</a></li>
+                        <li><a href="services.html#outstation">Outstation</a></li>
+                        <li><a href="services.html#airport">Airport Transfer</a></li>
+                        <li><a href="services.html#corporate">Corporate Travel</a></li>
+                        <li><a href="services.html#events">Wedding & Events</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
                     <h5>Contact Info</h5>
-                    <p class="mb-1"><i class="fas fa-map-marker-alt"></i> Shop number 2, Rattangarh Road, opposite Gurdwara Gurunanak Pura, Ambala City</p>
-                    <p class="mb-1"><i class="fas fa-phone"></i> 9896037769, 9996437769</p>
-                    <p><i class="fab fa-whatsapp"></i> <a href="#" class="text-white-50" onclick="openWhatsApp()">WhatsApp Booking</a></p>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Shop number 2, Rattangarh Road, opposite Gurdwara Gurunanak Pura, Ambala City</p>
+                    <p class="mb-2"><i class="fas fa-phone me-2"></i> 9896037769, 9996437769</p>
+                    <p class="mb-2"><i class="fas fa-envelope me-2"></i> info@neeltourtravels.com</p>
+                    <p><i class="fab fa-whatsapp me-2"></i> <a href="#" class="text-white-50" onclick="openWhatsApp()">WhatsApp Booking</a></p>
                 </div>
             </div>
-            <hr class="my-4">
+            <hr>
             <div class="text-center">
-                <p class="mb-0">&copy; 2024 Neel Tour Travels. All rights reserved.</p>
+                <p class="mb-0">&copy; <span data-year></span> Neel Tour Travels. All rights reserved. | <a href="#" class="text-white-50">Privacy Policy</a> | <a href="#" class="text-white-50">Terms of Service</a></p>
             </div>
         </div>
     </footer>
