@@ -157,12 +157,19 @@ h6 { font-weight: 500; }
 /* Hero Section */
 .hero {
     background: url('images/hero.jpg') center/cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
     min-height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
     padding: 100px 0 80px;
     overflow: hidden;
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .hero::before {
