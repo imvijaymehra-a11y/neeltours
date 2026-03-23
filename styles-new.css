@@ -1291,8 +1291,20 @@ footer .social-icons a {
 }
 
 footer .social-icons a:hover {
-    background: var(--primary-color);
-    transform: translateY(-3px);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+}
+
+.footer-logo:hover {
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(340deg) saturate(5);
+    transform: scale(1.05);
 }
 
 footer hr {
